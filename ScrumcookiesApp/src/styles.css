@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '~bootstrap/dist/css/bootstrap.min.css';
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -36,12 +36,11 @@
     flex: 0.4;
   }
   .iconLogin{
-    margin: 20px;
+    margin: 10px;
   }
 
   .toolbar {
-    height: 60px;
-    margin: -8px;
+    height: 60px;    
     display: flex;
     align-items: center;    
     background-color: #87522C;
@@ -49,6 +48,7 @@
     font-weight: 600;
     padding-left: 30px; 
     width: 100%;
+    text-align: center;
   }
 
   .logo img {
@@ -62,12 +62,17 @@
   .toolbar span{
     font-size: 13px;
   }
+
   form{
-    width: 50%;
+    width:300px;   
     margin: 100px auto;
     color: #87522C;
-    font-size: 1.5rem;
-  }
+    font-size: 1.4rem;
+    border: solid;
+   position: relative;
+   left:35px;
+   text-align: center
+    }
   .btn-login{
   font: bold 12px/24px arial, helvetica, sans-aerif;
   color: #1976d2;
@@ -75,16 +80,27 @@
   background: #c2c3c4;
 }
 .container-form{
-  border: solid 1px #1976d2;
-  margin: 100px auto;
-  text-align: center;
+
+  margin: 200px auto; 
+  width:90%;
+  padding-right: 110px;
+  
+}
+.d-block{
+  width: 80px;
+  height: 200px;
+}
+.container{
+  border: solid;
+  height: 700px;;  
   width: 100%;
+  padding-top: 20px;
 }
 
 
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
 
   .content {
     display: flex;
@@ -103,6 +119,39 @@
   svg.material-icons:not(:last-child) {
     margin-right: 8px;
   }
+  .card-div{
+  
+    float: right;
+    width: 100%;   
+    position: relative;
+    top: 100px;
+    border: solid;
+    
+ 
+  }
+ 
+  .container-card{    
+    width: 100%;    
+    height: 500px;
+   border: solid;
+   display: flex;
+  }
+
+  .card-proj{    
+    margin: 5px;
+    margin-left: 30px;
+    text-align: center;    
+    float: left;    
+    border:solid salmon;
+    font-size: 10px;
+    
+    }
+  .card-proj > img{
+    height: 80px;
+    width: 80px;
+    
+  }
+  
 
   .card svg.material-icons path {
     fill: #888;
@@ -114,6 +163,7 @@
     justify-content: center;
     margin-top: 16px;
   }
+
 
   .card {
     border-radius: 4px;
