@@ -5,12 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLoginComponent } from './pages/app-login/app-login.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { AgendamentoComponent } from './pages/agendamento/agendamento.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppLoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    AgendamentoComponent
   ],
   imports: [
     BrowserModule,
