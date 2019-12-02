@@ -7,17 +7,24 @@ import { AppLoginComponent } from './pages/app-login/app-login.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AgendamentoComponent } from './pages/agendamento/agendamento.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { CardComponent } from './Components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppLoginComponent,
     HomepageComponent,
-    AgendamentoComponent
+    AgendamentoComponent,
+    CardComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

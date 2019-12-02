@@ -98,6 +98,9 @@
 .toolbar #twitter-logo:hover {
   opacity: 0.8;
 }
+.card-content{
+  display: flex;
+}
 
   .content {
     display: flex;
@@ -290,7 +293,6 @@
   }
 
   footer {
-    margin-top: 8px;
     display: flex;
     align-items: center;
     line-height: 20px;
@@ -358,6 +360,17 @@
       right: 120px;
       transform: rotate(-5deg);
     }
+    footer{
+      position: fixed;
+      bottom: 0px;      
+      width: 100%;
+      margin: 0px;
+      height: 70px;
+    }
+    .card-content{
+      margin-top: 20px;
+    }
+   
   }
 
   @media screen and (max-width: 575px) {
@@ -367,3 +380,6 @@
     }
   }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
