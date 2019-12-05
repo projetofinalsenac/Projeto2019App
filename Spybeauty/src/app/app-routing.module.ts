@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppLoginComponent } from './pages/app-login/app-login.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
+import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
 
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: "home", component:HomepageComponent},
   {path: "login", component:AppLoginComponent},
   {path: "agendamento", component:AgendamentoComponent},   
-  {path: "servicos", component:ServicosComponent}, 
+  {path: "servicos", component:ServicosComponent},
+  {path: "addProfissional", component:AddProfissionalComponent},  
 ];
 
 @NgModule({

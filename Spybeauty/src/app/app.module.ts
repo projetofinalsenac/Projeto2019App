@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { ServicosComponent } from './pages/servicos/servicos.component';
+import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ServicosComponent } from './pages/servicos/servicos.component';
     AppLoginComponent,
     HomepageComponent,
     AgendamentoComponent,    
-    ServicosComponent    
+    ServicosComponent, AddProfissionalComponent    
   ],
   imports: [
     BrowserModule,
