@@ -18,6 +18,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import {  map } from 'rxjs/operators';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {  map } from 'rxjs/operators';
    AngularFireAuthModule,
    AngularFireStorageModule,
    AngularFirestoreModule,
+   FormsModule
   
   ],
   providers: [AngularFireAuthModule,AngularFireModule, AngularFireStorageModule],

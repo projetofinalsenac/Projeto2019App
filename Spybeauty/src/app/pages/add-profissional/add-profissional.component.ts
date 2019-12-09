@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfissionalServiceService } from '../../serv/profissional-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-profissional',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProfissionalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    protected profService: ProfissionalServiceService,
+    protected router: Router
+  ) { }
 
   ngOnInit() {
+
+
+  }
+  onsubmit(form) {
+    this.profService.save(form).then(
+      res => {
+        //this.resetFields();
+        this.router.navigate(['/home'])
+      }
+    )
   }
 
 }
+
+
+

@@ -2,15 +2,34 @@
     <h5 class="m-auto text-danger col-8 mt-6">Cadastro de Profissionais</h5>
 </div>
 
-<div class="col">
-    <form>
-        <div class="form-row">
-            <div class="col-10">
-                <input type="text" class="form-control" placeholder="First name">
+<section class="container " >
+        <form class="cad-prof"  #fc=ngForm (ngSubmit)="onsubmit(fc)">
+            <div class="form-group">                
+                <input type="text" class="form-control" placeholder="Nome"  [(ngModel)]="profissional.nome" name="nome" required>
+                <small class="form-text text-muted"></small>
             </div>
-            <div class="col-10">
-                <input type="text" class="form-control" placeholder="Last name">
+            <div class="form-group">                
+                <input type="email" class="form-control" placeholder="E-mail"  name="email" [(ngModel)]="profissional.email" required>
+                <small class="form-text text-muted"></small>
             </div>
-        </div>
-    </form>
-</div>
+            <div class="form-group">                
+                    <input type="email" class="form-control" placeholder="Atividade"  name="email" [(ngModel)]="profissional.atividade" required>
+                    <small class="form-text text-muted"></small>
+                </div>
+    
+            <div>
+                <div class="form-group">
+                    <input type="password" class="form-control"  placeholder="Senha"  name="pws"  minlength="6" [(ngModel)]="profissional.senha" required>
+                    
+                </div>
+               
+            </div>
+    
+            
+         
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary" >Salvar</button>
+                <button type="reset" class="btn btn-primary ml-2" routerLink="/">Cancelar</button>            
+            </div>
+        </form>
+    </section>
