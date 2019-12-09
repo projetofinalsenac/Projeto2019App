@@ -11,6 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
+import { ProfissionaisComponent } from './pages/profissionais/profissionais.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import {  map } from 'rxjs/operators';
+
 
 @NgModule({
   declarations: [
@@ -18,15 +26,20 @@ import { AddProfissionalComponent } from './pages/add-profissional/add-profissio
     AppLoginComponent,
     HomepageComponent,
     AgendamentoComponent,    
-    ServicosComponent, AddProfissionalComponent    
+    ServicosComponent, AddProfissionalComponent, ProfissionaisComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+   AngularFireAuthModule,
+   AngularFireStorageModule,
+   AngularFirestoreModule,
+  
   ],
-  providers: [],
+  providers: [AngularFireAuthModule,AngularFireModule, AngularFireStorageModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

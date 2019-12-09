@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppLoginComponent } from './pages/app-login/app-login.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
+import { ProfissionaisComponent } from './pages/profissionais/profissionais.component';
 
 
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: "login", component:AppLoginComponent},
   {path: "agendamento", component:AgendamentoComponent},   
   {path: "servicos", component:ServicosComponent},
-  {path: "addProfissional", component:AddProfissionalComponent},  
+  {path: "addProfissional", component:AddProfissionalComponent},
+  {path: "Profissionais", component:ProfissionaisComponent},    
 ];
 
 @NgModule({
