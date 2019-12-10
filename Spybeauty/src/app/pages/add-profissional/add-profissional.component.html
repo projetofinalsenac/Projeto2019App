@@ -4,7 +4,8 @@
 
 <section class="container " >
         <form class="cad-prof"  #fc=ngForm (ngSubmit)="onsubmit(fc)">
-            <div class="form-group">                
+            <div class="form-group">    
+                <label for=""></label>            
                 <input type="text" class="form-control" placeholder="Nome"  [(ngModel)]="profissional.nome" name="nome" required>
                 <small class="form-text text-muted"></small>
             </div>
