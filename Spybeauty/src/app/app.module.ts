@@ -19,6 +19,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import {  map } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
+import { PerfilProfComponent } from './pages/perfil-prof/perfil-prof.component';
+import { AngularFireDatabase } from '@angular/fire/database';
+
 
 
 @NgModule({
@@ -27,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     AppLoginComponent,
     HomepageComponent,
     AgendamentoComponent,    
-    ServicosComponent, AddProfissionalComponent, ProfissionaisComponent    
+    ServicosComponent, AddProfissionalComponent, ProfissionaisComponent, PerfilProfComponent    
   ],
   imports: [
     BrowserModule,
@@ -38,10 +41,11 @@ import { FormsModule } from '@angular/forms';
    AngularFireAuthModule,
    AngularFireStorageModule,
    AngularFirestoreModule,
-   FormsModule
+   FormsModule,
+   
   
   ],
-  providers: [AngularFireAuthModule,AngularFireModule, AngularFireStorageModule],
+  providers: [AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

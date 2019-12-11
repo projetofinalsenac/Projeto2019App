@@ -7,6 +7,7 @@ import { AppLoginComponent } from './pages/app-login/app-login.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
 import { ProfissionaisComponent } from './pages/profissionais/profissionais.component';
+import { PerfilProfComponent } from './pages/perfil-prof/perfil-prof.component';
 
 
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: "agendamento", component:AgendamentoComponent},   
   {path: "servicos", component:ServicosComponent},
   {path: "addProfissional", component:AddProfissionalComponent},
-  {path: "Profissionais", component:ProfissionaisComponent},    
+  {path: "Profissionais", component:ProfissionaisComponent},
+  {path: "perfil", component:PerfilProfComponent},       
 ];
 
 @NgModule({

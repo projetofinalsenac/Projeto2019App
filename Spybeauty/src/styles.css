@@ -41,16 +41,17 @@
     margin: 10px;
   }
 
-  .toolbar {
-    height: 60px;    
+  .toolbar {    
     display: flex;
     align-items: center;    
     background-color: #87522C;
     color: white;
     font-weight: 600;
     padding-left: 30px; 
-    width: 100%;
-    text-align: center;
+    padding-top: 5px; 
+    /*width: 100%;*/
+    /*text-align: center;*/
+  
   }
 
   .logo img {
@@ -64,8 +65,7 @@
     font-size: 13px;
   }
 
-  form{   
-    
+  form{       
     color: #87522C;
     font-size: 1.4rem;    
     position: relative;
@@ -80,9 +80,9 @@
 }
 .container-form{
 
-  margin: 200px auto; 
-  width:90%;
-  padding-right: 110px;
+  margin: 183px auto; 
+  width:100%;
+  padding-right: 95px;
   
 }
 .d-block{
@@ -95,12 +95,15 @@
 }
 
 
+
 .toolbar #twitter-logo:hover {
   opacity: 0.8;
 }
 .card-content{
   display: flex;
+  margin-top: 10px !important;
 }
+
 
   .content {
     display: flex;
@@ -372,6 +375,7 @@
     .card-content{
       margin-top: 17px;
       text-align: center;
+     
     }
 
     .cad-prof{
@@ -380,6 +384,15 @@
       position: static;
     }
     
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
   
    
   }

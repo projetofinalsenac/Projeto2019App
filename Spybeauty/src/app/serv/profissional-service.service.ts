@@ -15,7 +15,7 @@ export class ProfissionalServiceService {
 
   constructor(
    protected afire: AngularFirestore,
-   
+   protected afDatabase: AngularFireDatabase
   ) { }
 
   save(profissional: Profissional){
@@ -38,5 +38,12 @@ export class ProfissionalServiceService {
         )
     )
     
+  }
+
+  public getProfissional(key){
+    return this.afDatabase.object<Profissional>('profissionais/'+ key).valueChanges();
+  }
+  public getProf(key){
+    return this.afire.doc<Profissional>('profissional'+key).get();
   }
 }

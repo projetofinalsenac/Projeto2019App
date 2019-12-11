@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ProfissionalServiceService } from '../../serv/profissional-service.service';
 import { Router } from '@angular/router';
 import { Profissional } from '../../modelo/profissional';
-//import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
-const Swal = require('sweetalert2');
+//const Swal = require('sweetalert2');
 
 @Component({
   selector: 'app-add-profissional',
@@ -31,6 +31,8 @@ protected profissional: Profissional = new Profissional;
       }
     )
   }
+
+  
 
   alertmessage(title, text){
     Swal.fire({
