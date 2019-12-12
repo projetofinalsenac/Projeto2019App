@@ -1,27 +1,38 @@
-<div class="container-form">
-<form class="login100-form validate-form">
+<div class="container-form" >
+<form class="login100-form validate-form" #fc="ngForm" (ngSubmit)="onsubmit(fc)">
     <span class="login100-form-title">
         Member Login
     </span>
     <!--Pagina de Login feita
     -->
     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-        <input class="input100" type="text" name="email" placeholder="Email">
+        <input class="input100" type="text" name="email" placeholder="Email" [(ngModel)]="email" #e="ngModel">
         <span class="focus-input100"></span>
         <span class="symbol-input100">
             <i class="fa fa-envelope" aria-hidden="true"></i>
         </span>
     </div>
     <div class="wrap-input100 validate-input" data-validate="Password is required">
-        <input class="input100" type="password" name="pass" placeholder="Password">
+        <input class="input100" type="password" name="psw" [(ngModel)]="pws" #p="ngModel"  placeholder="Password">
         <span class="focus-input100"></span>
         <span class="symbol-input100">
             <i class="fa fa-lock" aria-hidden="true"></i>
         </span>
     </div>
-    <div class="container-login100-form-btn ">
+    <div class="container-login100-form-btn " (click)="login()">
         <button class="login100-form-btn btn-login">
             Login
         </button>        
 
     </div>
+    </form>
+    </div>
+
+    <div *ngIf="afAuth.user | async as user; else showLogin">
+            <h6>Hello {{ user.email }}!</h6>
+            <button (click)="logout()">Logout</button>
+          </div>
+          <ng-template #showLogin>
+            <p>Please login.</p>
+            <button (click)="login()">Login with Google</button>
+          </ng-template>

@@ -4,7 +4,8 @@ import { AgendamentoComponent } from './pages/agendamento/agendamento.component'
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppLoginComponent } from './pages/app-login/app-login.component';
-
+import { HomeCardComponent } from './pages/home-card/home-card.component';
+import { ServicosComponent } from './pages/servicos/servicos.component';
 
 
 const routes: Routes = [  
@@ -12,7 +13,9 @@ const routes: Routes = [
   {path: "home", component:HomepageComponent},
   {path: "login", component:AppLoginComponent},
   {path: "agendamento", component:AgendamentoComponent}, 
-  {path: "**", component:HomepageComponent},
+  
+  {path: 'card', component: HomeCardComponent},
+  {path: 'serv', component: ServicosComponent}
 ];
 
 @NgModule({
