@@ -37,16 +37,17 @@
     margin: 10px;
   }
 
-  .toolbar {
-    height: 60px;    
+  .toolbar {    
     display: flex;
     align-items: center;    
     background-color: #87522C;
     color: white;
     font-weight: 600;
     padding-left: 30px; 
-    width: 100%;
-    text-align: center;
+    padding-top: 5px; 
+    /*width: 100%;*/
+    /*text-align: center;*/
+  
   }
 
   .logo img {
@@ -60,7 +61,17 @@
     font-size: 13px;
   }
 
+<<<<<<< HEAD
  
+=======
+  form{       
+    color: #87522C;
+    font-size: 1.4rem;    
+    position: relative;
+    left:45px;
+    text-align: center
+    }
+>>>>>>> 49eb85e9cc2bf9e499c876923e7ee87c6e1003c7
   .btn-login{
   font: bold 12px/24px arial, helvetica, sans-aerif;
   color: #1976d2;
@@ -68,14 +79,28 @@
   background: #c2c3c4;
 }
 
+<<<<<<< HEAD
+=======
+  margin: 183px auto; 
+  width:100%;
+  padding-right: 95px;
+  
+}
+>>>>>>> 49eb85e9cc2bf9e499c876923e7ee87c6e1003c7
 .d-block{
   width: 80px;
   height: 200px;
 }
 
+
 .toolbar #twitter-logo:hover {
   opacity: 0.8;
 }
+.card-content{
+  display: flex;
+  margin-top: 10px !important;
+}
+
 
   .content {
     display: flex;
@@ -120,6 +145,7 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
+
 
   .card-container .card:not(:last-child) {
     margin-right: 0;
@@ -237,8 +263,22 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+<<<<<<< HEAD
  
    
+=======
+  footer {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    background-color: #87522C;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+>>>>>>> 49eb85e9cc2bf9e499c876923e7ee87c6e1003c7
 
   .github-star-badge {
     color: #24292e;
@@ -354,6 +394,37 @@
       right: 120px;
       transform: rotate(-5deg);
     }
+
+    footer{
+      position: fixed;
+      bottom: 0px;      
+      width: 100%;
+      margin: 0px;
+      height: 70px;
+    }
+    .card-content{
+      margin-top: 17px;
+      text-align: center;
+     
+    }
+
+    .cad-prof{
+      width: 100%;
+      margin-left: 0px;
+      position: static;
+    }
+    
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+  
+   
   }
 
   @media screen and (max-width: 575px) {
@@ -364,6 +435,7 @@
   }
 
 
+<<<<<<< HEAD
   @media screen and (max-width: 2000px) {
     svg#rocket-smoke {
       display: none;
@@ -497,5 +569,7 @@
     
   }
   
+=======
+>>>>>>> 49eb85e9cc2bf9e499c876923e7ee87c6e1003c7
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

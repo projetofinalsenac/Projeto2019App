@@ -12,7 +12,11 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
+<<<<<<< HEAD
     "@angular/cdk": "^8.2.3",
+=======
+    "@angular/cdk": "~8.2.3",
+>>>>>>> 49eb85e9cc2bf9e499c876923e7ee87c6e1003c7
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
@@ -27,6 +31,7 @@
     "firebase": "^7.5.2",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.4.0",
+    "sweetalert2": "^9.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
