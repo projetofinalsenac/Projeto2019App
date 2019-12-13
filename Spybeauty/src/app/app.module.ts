@@ -13,7 +13,7 @@ import { ServicosComponent } from './pages/servicos/servicos.component';
 import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
 import { ProfissionaisComponent } from './pages/profissionais/profissionais.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
@@ -41,11 +41,9 @@ import { AngularFireDatabase } from '@angular/fire/database';
    AngularFireAuthModule,
    AngularFireStorageModule,
    AngularFirestoreModule,
-   FormsModule,
-   
-  
+   FormsModule,  
   ],
-  providers: [AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabase],
+  providers: [AngularFirestoreDocument, AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

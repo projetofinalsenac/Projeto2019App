@@ -8,6 +8,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './perfil-prof.component.html',
   styleUrls: ['./perfil-prof.component.css']
 })
+
+
 export class PerfilProfComponent implements OnInit {
   protected id: string= null;
   protected profissional: Profissional = new Profissional;
@@ -19,17 +21,20 @@ export class PerfilProfComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.id = this.activedRouter.snapshot.paramMap.get("id");
-    console.log();
-    
+    this.id = this.activedRouter.snapshot.paramMap.get("id");      
     if(this.id){
       this.profServ.getProfissional(this.id).subscribe(
         res => {
-          console.log(this.id);
           this.profissional = res;
+          console.log(res);
+          
         }
-      );
+      )
+    
     }
+    
   }
+
+  
 
 }

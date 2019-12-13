@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: "servicos", component:ServicosComponent},
   {path: "addProfissional", component:AddProfissionalComponent},
   {path: "Profissionais", component:ProfissionaisComponent},
-  {path: "perfil", component:PerfilProfComponent},       
+  {path: "Profissionais/perfilProf/:id", component:PerfilProfComponent},
 ];
 
 @NgModule({
