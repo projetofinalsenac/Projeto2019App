@@ -17,22 +17,27 @@ export class PerfilProfComponent implements OnInit {
   constructor(
     protected profServ: ProfissionalServiceService,
     protected router: Router,
-    protected activedRouter: ActivatedRoute
+    protected activatedRouter: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.id = this.activedRouter.snapshot.paramMap.get("id");      
+
+
+    this.id = this.activatedRouter.snapshot.paramMap.get("id");
     if(this.id){
       this.profServ.getProfissional(this.id).subscribe(
         res => {
-          this.profissional = res;
+          this.profissional.nome = res.get('nome');
+          this.profissional.email = res.get('email');
+          this.profissional.atividade = res.get('atividade');
+          this.profissional.senha = res.get('senha');
           console.log(res);
-          
+
+
         }
       )
     
     }
-    
   }
 
   

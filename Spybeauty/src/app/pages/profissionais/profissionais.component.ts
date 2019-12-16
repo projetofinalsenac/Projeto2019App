@@ -12,6 +12,7 @@ export class ProfissionaisComponent implements OnInit {
   //const Swal = require('sweetalert2');
   constructor(
     protected proService: ProfissionalServiceService,
+
 protected router: Router
   ) { }
 
@@ -20,7 +21,9 @@ protected router: Router
   }
 
   perfil(profissional){
+
     this.router.navigate(['perfilProf', profissional.key]);
+
   }
 
 }

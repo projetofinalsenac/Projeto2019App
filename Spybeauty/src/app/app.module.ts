@@ -15,12 +15,12 @@ import { ProfissionaisComponent } from './pages/profissionais/profissionais.comp
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {  AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
-import {  map } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
 import { PerfilProfComponent } from './pages/perfil-prof/perfil-prof.component';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 
 
@@ -41,9 +41,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
    AngularFireAuthModule,
    AngularFireStorageModule,
    AngularFirestoreModule,
-   FormsModule,  
+   FormsModule    
   ],
-  providers: [ AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabaseModule],
+  providers: [ AngularFireModule,AngularFireDatabase, AngularFireDatabaseModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
