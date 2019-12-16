@@ -21,7 +21,7 @@ export class PerfilProfComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-<<<<<<< HEAD
+
     this.id = this.activatedRouter.snapshot.paramMap.get("id");
     if(this.id){
       this.profServ.getProfissional(this.id).subscribe(
@@ -31,24 +31,12 @@ export class PerfilProfComponent implements OnInit {
           this.profissional.atividade = res.get('atividade');
           this.profissional.senha = res.get('senha');
           console.log(res);
-=======
-    this.id = this.activedRouter.snapshot.paramMap.get("id");      
-    if(this.id){
-      this.profServ.getProfissional(this.id).subscribe(
-        res => {
-          this.profissional = res;
-          console.log(res);
-          
->>>>>>> 928bc9c17b3b5de435316645e85c7602a72e0931
+
         }
       )
     
     }
-<<<<<<< HEAD
-   
-=======
-    
->>>>>>> 928bc9c17b3b5de435316645e85c7602a72e0931
+
   }
 
   

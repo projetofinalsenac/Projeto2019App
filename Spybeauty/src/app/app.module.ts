@@ -13,14 +13,14 @@ import { ServicosComponent } from './pages/servicos/servicos.component';
 import { AddProfissionalComponent } from './pages/add-profissional/add-profissional.component';
 import { ProfissionaisComponent } from './pages/profissionais/profissionais.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import {  map } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
 import { PerfilProfComponent } from './pages/perfil-prof/perfil-prof.component';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 
 
 
@@ -41,17 +41,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
    AngularFireAuthModule,
    AngularFireStorageModule,
    AngularFirestoreModule,
-<<<<<<< HEAD
-   FormsModule,
-   AngularFireDatabaseModule,
+   FormsModule, 
+    AngularFireDatabaseModule
+  ],
+  providers: [ AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabaseModule],
 
-  ],
-  providers: [AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabaseModule],
-=======
-   FormsModule,  
-  ],
-  providers: [AngularFirestoreDocument, AngularFireAuthModule,AngularFireModule, AngularFireStorageModule, AngularFireDatabase],
->>>>>>> 928bc9c17b3b5de435316645e85c7602a72e0931
   bootstrap: [AppComponent]
 })
 export class AppModule { }
