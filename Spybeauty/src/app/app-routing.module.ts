@@ -19,7 +19,11 @@ const routes: Routes = [
   {path: "servicos", component:ServicosComponent},
   {path: "addProfissional", component:AddProfissionalComponent},
   {path: "Profissionais", component:ProfissionaisComponent},
+<<<<<<< HEAD
   {path: "perfilProfissional/:id", component:PerfilProfComponent},       
+=======
+  {path: "Profissionais/perfilProf/:id", component:PerfilProfComponent},
+>>>>>>> 928bc9c17b3b5de435316645e85c7602a72e0931
 ];
 
 @NgModule({

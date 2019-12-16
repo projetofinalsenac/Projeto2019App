@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <div style="height: auto; position: absolute" class="teste border border-danger" *ngIf="prof | async as profs">
     <div class="pt-0 mt-1" style="float: left; margin-left: 3px; z-index: -1" routerLink = "perfilProfissional/{{p.key}}" *ngFor="let p of profs">
+=======
+<div style="height: auto; position: absolute" class="teste border border-danger">
+    <div class=" pt-0 mt-1" style="float: left; margin-left: 3px; z-index: -1" routerLink="perfilProf/{{p.key}}" *ngFor="let p of prof | async">
+>>>>>>> 928bc9c17b3b5de435316645e85c7602a72e0931
         <div class=" border border-success col-12" style=" text-align: center">
             <img src="../../../assets/img/biscoito.jpg" alt="" style="width: 40px; margin: 2px auto;">
             <div>
@@ -10,7 +15,11 @@
                 <a href="/agendar" >
                     <button style="width: 40px; height: 15px; font-size: 6px" class="mr-1">Agendar</button>
                 </a>
+<<<<<<< HEAD
                 <a href="perfilProfissional/{{p.key}}">
+=======
+                <a>
+>>>>>>> 928bc9c17b3b5de435316645e85c7602a72e0931
                     <button style="width: 40px; height: 15px;font-size: 6px">Perfil</button>
                 </a>
                 
