@@ -1,6 +1,11 @@
 {
-  "name": "scrum-cookies",
-  "version": "0.0.0",
+  "name": "spybeauty",
+  "displayName": "SpybeautyApp",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -28,7 +33,8 @@
     "rxjs": "~6.4.0",
     "sweetalert2": "^9.5.3",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "cordova-android": "^8.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.19",
@@ -49,6 +55,15 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }
