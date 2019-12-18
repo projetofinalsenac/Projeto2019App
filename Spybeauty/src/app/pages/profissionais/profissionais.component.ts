@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./profissionais.component.css']
 })
 export class ProfissionaisComponent implements OnInit {
-  protected prof: any
+  public prof: any
   //const Swal = require('sweetalert2');
   constructor(
     protected proService: ProfissionalServiceService,

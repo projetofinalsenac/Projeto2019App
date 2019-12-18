@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 export class PerfilProfComponent implements OnInit {
   protected id: string= null;
-  protected profissional: Profissional = new Profissional;
+  public profissional: Profissional = new Profissional;
   
   constructor(
     protected profServ: ProfissionalServiceService,

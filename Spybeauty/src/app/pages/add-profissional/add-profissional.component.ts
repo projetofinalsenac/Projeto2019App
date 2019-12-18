@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
   styleUrls: ['./add-profissional.component.css']
 })
 export class AddProfissionalComponent implements OnInit {
-protected profissional: Profissional = new Profissional;
+public profissional: Profissional = new Profissional;
   constructor(
     protected profService: ProfissionalServiceService,
     protected router: Router
