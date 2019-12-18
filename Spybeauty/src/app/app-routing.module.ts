@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: "agendamento", component:AgendamentoComponent},   
   {path: "servicos", component:ServicosComponent},
   {path: "addProfissional", component:AddProfissionalComponent},
-  {path: "Profissionais", component:ProfissionaisComponent},
+  {path: "profissionais", component:ProfissionaisComponent},
   {path: "perfilProfissional/:id", component:PerfilProfComponent},       
 
 
