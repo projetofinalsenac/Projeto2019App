@@ -1,18 +1,16 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar d-flex" role="banner">
 
-  <div class="logo">
-    <img width="40" alt="Angular Logo" src="../assets/img/biscoito.jpg" />
-    <span>ScrumCookies</span>
+  <div class="logo" style>
+    <img style=" height: 60px;" alt="Angular Logo" src="../assets/img/Logomarca.png" />
+    
   </div>
-
-  <a href="/login">
-    <img class="login-img" width="40" alt="ScrumCookies Login" src="../assets/account_circle-24px.svg" />
-  </a>
+  
+  <p *ngIf="authService.user | async" class="mt-3" style="font-size: 10px;">Olá! {{(authService.user| async)?.displayName}}</p>
+  <p *ngIf="authService.user | async" class="mt-3" style="font-size: 10px;" (click)="logout()">logout</p>
 </div>
 
 <div>
-
   <router-outlet></router-outlet>
 </div>
 
@@ -21,18 +19,26 @@
 
 
 <!-- Footer -->
-<footer class="page-footer text-center p-4 text-light fixed-bottom">
-  <a href="/home">
-    <div class="mr-4">
-      <img src="../assets/img/biscoito.jpg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
-      <p>Home</p>
+<footer class=" page-footer text-center text-light fixed-bottom">
+  <a routerLink="/home">
+    <div class="mr-4 p-3">
+      <img src="../assets/img/home-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
+      <p class="text-light">Home</p>
     </div>
   </a>
-  <div class="border border-success" style="width: 1400px; height: 50px;">
 
-  </div>
-
-
+  <a href="/agendamento">
+    <div class="mr-4 p-3">
+      <img src="../assets/img/event_note-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
+      <p class="text-light">Agendar</p>
+    </div>
+  </a>
+  <a href="/login">
+    <div class="mr-8 p-3">
+      <img src="../assets/img/portrait-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
+      <p class="text-light">Perfil</p>
+    </div>
+  </a>
 
 </footer>
 <!-- Footer -->

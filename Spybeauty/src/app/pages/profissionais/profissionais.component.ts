@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./profissionais.component.css']
 })
 export class ProfissionaisComponent implements OnInit {
-  public prof: any
+  protected prof: any
   //const Swal = require('sweetalert2');
   constructor(
     protected proService: ProfissionalServiceService,
 
-protected router: Router
+    protected router: Router
+
   ) { }
 
   ngOnInit() {
@@ -22,7 +23,7 @@ protected router: Router
 
   perfil(profissional){
 
-    this.router.navigate(['perfilProf', profissional.key]);
+    this.router.navigate(['perfil' + profissional.key]);
 
   }
 

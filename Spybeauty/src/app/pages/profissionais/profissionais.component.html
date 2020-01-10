@@ -1,28 +1,28 @@
+<div  class=" teste " *ngIf="prof | async as profs">
+    <div class="profs-rect pt-0 mt-1" style="float: left;" routerLink="perfilProfissional/{{p.key}}"
+        *ngFor="let p of profs">
 
 
-
-<div style="height: auto; position: absolute" class="teste border border-danger" *ngIf="prof | async as profs">
-    <div class="pt-0 mt-1" style="float: left; margin-left: 3px; z-index: -1" routerLink = "/perfilProfissional/{{p.key}}" *ngFor="let p of profs">
-
-
-        <div class=" border border-success col-12" style=" text-align: center">
+        <div class=" border border-success col-12 " style=" text-align: center;width: 100%;">
             <img src="../../../assets/img/biscoito.jpg" alt="" style="width: 40px; margin: 2px auto;">
             <div>
                 <h6 style="font-size: 10px;">{{p.nome}}</h6>
                 <p style="font-size: 5px">{{p.atividade}}</p>
             </div>
             <div>
-                <a href="/agendamento" >
-                    <button style="width: 40px; height: 15px; font-size: 6px" class="mr-1">Agendar</button>
+                <a href="agendamento/{{p.key}}" style="width: 40px; height: 15px; font-size: 10px;padding: 0px;"
+                    class=" btn btn-success">Agendar
                 </a>
-                <a href="perfilProfissional/{{p.key}}">
-                    <button style="width: 40px; height: 15px;font-size: 6px">Perfil</button>
+
+                <a href="perfilProfissional/{{p.key}}" class="btn btn-success"
+                    style="margin-left: 2px; width: 40px; height: 15px;font-size: 10px; padding:0px ;">
+                    Perfil
                 </a>
-                
+
             </div>
         </div>
     </div>
-    <section class="border border-success" style="width: 100%; height: 70px; float: left;">
+    <section class="" style="width: 100%; height: 70px; float: left;">
 
     </section>
 </div>

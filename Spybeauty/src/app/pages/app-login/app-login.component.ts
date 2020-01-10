@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/serv/auth.service';
+import { Profissional } from 'src/app/modelo/profissional';
+import { RouterModule,Routes, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-app-login',
@@ -6,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-login.component.css']
 })
 export class AppLoginComponent implements OnInit {
-
-  constructor() { }
+protected email: string;
+protected senha: string;
+public username: string;
+  constructor(
+    public authservice: AuthService,
+    protected routes: Router
+  ) {}
 
   ngOnInit() {
   }
-
+  
+login(){
+  this.authservice.login(this.email, this.senha)
+}
 }

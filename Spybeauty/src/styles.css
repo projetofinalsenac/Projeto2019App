@@ -9,6 +9,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  body{
+    background-color: rgb(219, 205, 197);
+  }
 
   h1,
   h2,
@@ -42,24 +45,24 @@
   }
 
   .toolbar {    
+    height: 60px;    
     display: flex;
     align-items: center;    
-    background-color: #87522C;
+    background-color: rgb(243, 149, 209);
     color: white;
     font-weight: 600;
     padding-left: 30px; 
-    padding-top: 5px; 
-    /*width: 100%;*/
-    /*text-align: center;*/
-  
+    width: 100%;
+    text-align: center;
   }
 
   .logo img {
-    margin: 0 25px;       
-    width: 30px;
+    /* margin: 0 25px;        */
+    width: 85px;
   }
   .login-img{
     width: 100%;
+    padding: 20px;
   }
   .toolbar span{
     font-size: 13px;
@@ -80,9 +83,9 @@
 }
 .container-form{
 
-  margin: 183px auto; 
-  width:100%;
-  padding-right: 95px;
+  margin: 200px auto; 
+  width:90%;
+  padding-right: 110px;
   
 }
 .d-block{
@@ -149,6 +152,11 @@
     height: 80px;
     width: 80px;
     
+  }
+  .profs-rect{
+    width: 180px;    
+    margin-left: 13px;
+    margin-top: 30px;
   }
   
 
@@ -300,7 +308,7 @@
     display: flex;
     align-items: center;
     line-height: 20px;
-    background-color: #87522C;
+    background-color: rgb(243, 149, 209);
   }
 
   footer a {
@@ -350,6 +358,7 @@
     .terminal {
       width: 100%;
     }
+    
 
     .card:not(.highlight-card) {
       height: 16px;
@@ -373,9 +382,19 @@
       height: 70px;
     }
     .card-content{
-      margin-top: 17px;
+      margin-top: 6px;
       text-align: center;
      
+    }
+    .selects{
+      display: flex;
+      text-align: center;
+    }
+    .selects select{
+      font-size: 13px;
+      width: 30%;
+
+      
     }
 
     .cad-prof{
@@ -383,6 +402,13 @@
       margin-left: 0px;
       position: static;
     }
+    .form-group{
+      margin-bottom: 0.50rem;
+    }
+    .wrap-input100{
+      margin-bottom: 5px;
+    }
+    
     
     ::-webkit-scrollbar {
       -webkit-appearance: none;
@@ -392,18 +418,125 @@
       border-radius: 4px;
       background-color: rgba(0,0,0,.5);
       -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-  } 
+  }
   
    
   }
 
-  @media screen and (max-width: 575px) {
+ 
+  /*IPHONE 6/7/8 PLUS*/
+  @media screen and (max-width: 414px) {
     svg#rocket-smoke {
       display: none;
       visibility: hidden;
     }
-  }
+    .teste{
+      padding-left: 3px
 
+    }
+    .profs-rect{
+     width: 133px;
+     margin-left: 2px;  
+    }
+    
+  }
+  /*IPHONE X*/
+  @media screen and (max-width: 375px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+    .teste{
+      padding-left: 3px
+
+    }
+    .profs-rect{
+     width: 120px;
+    margin-left: 2px;  
+    }
+    
+  }
+  
+
+  /*Galaxy S5*/
+  @media screen and (max-width: 360px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+    .teste{
+      padding-left: 1px
+
+    }
+    .profs-rect{
+     margin-left: 2px;
+     width: 117px
+           
+    }
+
+    .form-agendamento{      
+      left: 0px;
+      text-align: left;
+    }
+    .cardi {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 350px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+    .cardi img{
+      height: 210px;
+    }
+    
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+    
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+    }
+    
+    button:hover, a:hover {
+      opacity: 0.7;
+    }
+    .titulo{
+      margin: 5px auto;
+      width: 100%;
+      padding: 0px;
+    }
+    .titulo h5 {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .addProBody{
+      margin-top: 0px !important;
+    }
+  
+    
+  }
+  
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.s-4{
+  font-size: 4rem;
+  color: rgb(180, 69, 152);
+}

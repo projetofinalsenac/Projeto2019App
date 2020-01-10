@@ -1,32 +1,39 @@
-<div class="agendamento text-center mt-2">
-    
-        <h6 class="agendamento col-6 m-auto">Agendamento</h6>
-    
-    <div class="container mt-4">
+<div class="container text-center  p-1">
+    <h4>Agendamento</h4>
+    <form action="" class="form-group form-agendamento" #fc=ngForm (ngSubmit)="submitAgendamento(fc)">
+        <div class="mb-2">
+            <input type="text" class="form-control" name="nomeprofissional" placeholder="Nome profissional" value="{{profissional.nome + profissional.sobrenome}} " 
+            [ngModel]='agendamento.profissional' name="nomeprofissional" required>
+        </div>
+        <div>
+            <input type="text" class="form-control" name="nomecliente" placeholder="Nome" [(ngModel)]='agendamento.nomecliente' name="nomecliente" required>
+        </div>
+        <div class="mt-2">
+            <input class="form-control" type="text" name="telefone" 
+            [(ngModel)]='agendamento.telefone' name="agendammento.telefone" placeholder="telefone" required>
+        </div>
 
-    </div>
-</div>
-<!--
-<form class="form-agendamento" action="">
-        <div>
-            <label for="">NomeCliente</label>
-            <input class="nome-cliente" type="text">
-        </div>
-        <div>
-            <input class="nome-profissional" type="text">
-        </div>
-        <div>
-            <label class="endereço">Endereço</label>
-            <div class="dados">
-                <input>Rua:
-                <div>
-                    <input type="text">N°:
-                    <input type="text">Complemento:
-                </div>
-                <input type="text">Cidade:
-                <input type="text">UF:
+        <div class=" p-0 mt-2 selects col-12">            
+                <select class="form-control ml-2" [(ngModel)]='agendamento.atividade' name='atividade'>
+                    <option value="Atividade">Atividade</option>
+                    <option value="{{a}}" *ngFor="let a of profissional.atividade">{{a}}</option>
+                </select>
+            
 
-            </div>
+            
+                <select class="form-control ml-2" [(ngModel)]='agendamento.dia' name="dia">
+                    <option value="Dia">Dia</option>
+                    <option value="{{d}}" *ngFor="let d of profissional.dias">{{d}}</option>
+                </select>
+            
+
+            
+                <select class=" form-control ml-2" [(ngModel)]='agendamento.horario' name="horario">
+                    <option value="Horario">Horario</option>
+                    <option value="{{h}}" *ngFor="let h of profissional.horarios">{{h}}</option>
+                </select>
         </div>
+
+        <button class="btn btn-primary col-4 mt-5" type="submit" >Agendar</button>
     </form>
--->
+</div>
