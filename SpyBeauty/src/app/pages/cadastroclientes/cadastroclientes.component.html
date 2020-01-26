@@ -1,0 +1,45 @@
+<div class="container" style="width: 100%;">
+    <div class="titulo">
+        <h5 class="text-danger mt-6">Cadastro de Clientes</h5>
+    </div>
+
+    <div class="container  p-2 addProBody">
+        <form class="cad-prof" #fc=ngForm (ngSubmit)="onsubmit(fc)">
+            <div class="form-group mt-0">
+                <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome"
+                    required>
+                <input type="text" class="form-control mt-2" placeholder="Sobrenome" [(ngModel)]="cliente.sobrenome"
+                    name="sobrenome" required>
+                <small class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="E-mail" name="email" [(ngModel)]="cliente.email"
+                    required>
+                <small class="form-text text-muted"></small>
+            </div>
+            <div class="form-group text-left d-flex">
+                <input type="text" class="form-control" placeholder="Telefone" name="telefone"
+                    [(ngModel)]="cliente.telefone" required>
+            </div>
+            <div>
+                <div class="form-group text-left d-flex">
+                    <input type="text" class="form-control" placeholder="CPF" name="cpf" [(ngModel)]="cliente.cpf"
+                        required>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="form-group text-left">
+                    <input type="text" class="form-control" placeholder="Senha" name="senha" [(ngModel)]="cliente.senha"
+                        required>
+                </div>
+
+            </div>
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary col-4">Salvar</button>
+                <button type="reset" class="btn btn-primary ml-2 col-4 mr-4" routerLink="/">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

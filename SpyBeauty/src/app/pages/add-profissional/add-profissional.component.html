@@ -1,0 +1,60 @@
+<div class="titulo">
+    <h5 class="text-danger mt-6">Cadastro de Profissionais</h5>
+</div>
+
+<div class="container  p-2 addProBody" >
+    <form class="cad-prof" #fc=ngForm (ngSubmit)="onsubmit(fc)">
+        <div class="form-group mt-0">            
+            <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="profissional.nome" name="nome"
+                required>
+                <input type="text" class="form-control mt-2" placeholder="Sobrenome" [(ngModel)]="profissional.sobrenome" name="sobrenome"
+                required>
+            <small class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="E-mail" name="email" [(ngModel)]="profissional.email"
+                required>
+            <small class="form-text text-muted"></small>
+        </div>
+        <div class="form-group text-left d-flex">
+            <input type="text" class="form-control col-8" placeholder="Atividade" name="atividade" 
+                [(ngModel)]="atividade"  required>
+                <a class="btn" (click)="addAtividade(atividade)">Adicionar</a>
+            
+        </div>
+        <div>
+            <div class="form-group text-left d-flex">
+                <input type="text" class="form-control col-8" placeholder="Horarios" name="horario" minlength="6"
+                    [(ngModel)]="horario" required>
+                    
+                        <a class="btn" (click)="addHorario(horario)">Adicionar</a>
+            </div>
+
+        </div>
+        <div>
+            <div class="form-group text-left">
+                <input type="text" class="form-control col-8 float-left" placeholder="Dias disponiveis" name="dias" minlength="8"
+                    [(ngModel)]="dia" required>
+                    
+                        <a class="btn float-left col-2" (click)="addDia(dia)">Adicionar</a>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="form-group pt-0">
+                <input type="password" class="form-control" placeholder="Senha" name="pws" minlength="6"
+                    [(ngModel)]="profissional.senha" required>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="form-group text-right">
+            <button type="submit" class="btn btn-primary col-4">Salvar</button>
+            <button type="reset" class="btn btn-primary ml-2 col-4 mr-4" routerLink="/">Cancelar</button>
+        </div>
+    </form>
+</div>

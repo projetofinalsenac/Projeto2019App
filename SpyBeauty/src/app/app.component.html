@@ -1,0 +1,33 @@
+<!-- Toolbar -->
+<div class="toolbar d-flex" role="banner">
+
+  <div class="logo" style>
+    <img style="width: 60px; height: 60px;" alt="Angular Logo" src="assets/img/logomarca.png" />
+    
+  </div>
+  <div>
+    <p *ngIf="authService.user | async" class="mt-3" style="font-size: 10px;">Olá! {{(authService.user| async)?.displayName}}</p>
+  <a (click)="signup()" *ngIf="authService.user | async" style="font-size: 10px;">Logout</a>
+  </div>
+  
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer class=" page-footer text-center text-light fixed-bottom">
+  <a href="" routerLink="home">
+    <div class="ml-2">
+      <img src="assets/img/home-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
+      <p>Home</p>
+    </div>
+  </a>
+
+</footer>
+<!-- Footer -->

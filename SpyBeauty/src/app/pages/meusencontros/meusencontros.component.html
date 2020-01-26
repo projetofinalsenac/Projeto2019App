@@ -1,0 +1,16 @@
+<div *ngIf="agenda | async as ag" class=" mt-1">
+    <div *ngFor="let a of ag" style="height: 100px;">
+        <mat-card class=" mt-2" style="height: 100px; width: 95%; margin-left: 8px;">
+            <div class="float-left ">
+                <img src="assets/img/biscoito.jpg" mat-card-sm-image>
+            </div>
+            <div class=" float-left col-8 ">
+                <p style="font-size: 10px;"><strong class="text-primary">Profissional</strong>: <strong class="text-info ml-3">{{a.profissional}}</strong></p>
+                <p style="font-size: 9px"><strong class="text-primary">Cliente</strong>: <strong class="text-info ml-3">{{a.nomecliente}}</strong></p>
+                <p style="font-size: 9px"><strong class="text-primary">Dia</strong>: <strong class="text-info ml-3">{{a.dia}}</strong></p>
+                <p style="font-size: 9px"><strong class="text-primary">Horario</strong>: <strong class="text-info ml-3">{{a.horario}}</strong></p>
+                <p style="font-size: 9px"><strong class="text-primary" class="text-primary">Atividade</strong>: <strong  class="text-info ml-3">{{a.atividade}}</strong></p>
+            </div>            
+        </mat-card>
+    </div>
+</div>
