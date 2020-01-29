@@ -28,11 +28,10 @@
     flex: 0.4;
   }
   .logo{
-    width: 80px; 
-    margin-left: 140px;
-    margin-right: 66px;
+    width: 140px; 
+    margin-left: 100px;
+    margin-right: 45px;
     align-items: center;
-    
   }
 
   .spacer2{
@@ -47,24 +46,21 @@
     text-align: center;    
     background-color: #F383C2;
     color: white;
-    font-weight: 600;
-    
-    padding-top: 5px; 
-    /*width: 100%;*/
-    /*text-align: center;*/
-  
+    font-weight: 400; 
+    padding-top: 6px;    
+    font-size: 12px;
+    height: 70px;
   }
 
   .logo img {
     margin: 0 25px;       
-    width: 30px;
+    width: 100px;
+    height: 60px;
   }
   .login-img{
     width: 100%;
   }
-  .toolbar span{
-    font-size: 13px;
-  }
+ 
 
   form{       
     color: #87522C;
@@ -72,6 +68,16 @@
     position: relative;
     left:45px;
     text-align: center
+    }
+
+    .agendamento{
+      width: 100%;  
+      font-size: 100px;  
+    }
+    .form-agendamento{
+        width: 100%;
+        position: static;
+        margin: 0 auto;
     }
   .btn-login{
   font: bold 12px/24px arial, helvetica, sans-aerif;
@@ -102,18 +108,22 @@
 }
 .card-content{
   display: flex;
-  margin-top: 10px !important;
+  height: 125px;
 }
-.card-content i{
-  width: 60px;
-  height: 60px;
+.card-content-home i{
+  width: 60px;  
   font-size: 60px;
 }
-.card-content img{
-  width: 60px;
-  height: 60px;
-  
+.card-content-home{
+  display: flex;
+  height: 160px;
 }
+
+.card-content-serv{
+  display: flex;
+  height: 160px;
+}
+
 
 
   .content {
@@ -312,12 +322,7 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
-  footer {
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-    background-color: #F383C2;
-  }
+ 
 
   footer a {
     display: flex;
@@ -387,9 +392,14 @@
       bottom: 0px;      
       width: 100%;
       margin: 0px;
-      height: 70px;
-    }
-    .card-content{
+      height: 68px;      
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+      background-color: #F383C2;
+      }
+    
+    .card-content-home{
       margin: 17px auto;
       text-align: center;
      
@@ -446,9 +456,16 @@
      width: 133px;
      margin-left: 2px;  
     }
-    .ag{
-      width: 100%;
-    }
+  .agendamento{
+    width: 100%;    
+  }
+  .form-agendamento{
+      width: 95%;
+      position: static;
+      margin: 0 auto;
+  }
+  
+  
     
   }
   /*IPHONE X*/
@@ -490,10 +507,7 @@
            
     }
 
-    .form-agendamento{      
-      left: 0px;
-      text-align: left;
-    }
+    
     .cardi {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       max-width: 350px;

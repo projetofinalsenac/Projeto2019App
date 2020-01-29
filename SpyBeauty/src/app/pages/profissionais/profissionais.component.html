@@ -1,15 +1,16 @@
 <div class=" teste " *ngIf="prof | async as profs">
-    <div class="card-content col-12 pl-2 mt-0 text-left" routerLink="/perfilProfissional/{{p.key}}"
+    <div class="card-content col-12 pl-2 mt-1 text-left" routerLink="/perfilProfissional/{{p.key}}"
         *ngFor="let p of profs">
-        <mat-card class="col-12">
+        <mat-card class="col-12 pl-0">
             <div class="col-4 float-left " style="height: 100px;">
                 <img src="assets/img/biscoito.jpg" mat-card-sm-image>
             </div>
-            <div class=" float-left col-8 " style="height: 70px;">
-                <p style="font-size: 10px;">{{p.nome}}</p>
-                <p style="font-size: 9px">{{p.atividade}}</p>
+            <div class=" float-left col-8" style="height: 70px;">
+                <p style="font-size: 10px;">Profissional: {{p.nome}}</p>
+                <p style="font-size: 9px" *ngFor="let at of p.atividade">{{at}}</p>
+                
             </div>
-            <div class="" style="height: 30px;width: 202px; float: right;">                
+            <div class="" style="height: 30px;width: 202px; float: right; margin-top: 5px;">                
                 <a href="" style="font-size: 10px;"class="btn btn-success mr-2  float-right" routerLink="/agendamento/{{p.key}}">Agendar</a>
             </div>
         </mat-card>

@@ -1,15 +1,14 @@
 <!-- Toolbar -->
 <div class="toolbar d-flex" role="banner">
 
-  <div class="logo" style>
-    <img style="width: 60px; height: 60px;" alt="Angular Logo" src="assets/img/logomarca.png" />
-    
+  <div class="logo text-center" style>
+    <img  alt="Angular Logo" src="assets/img/logomarca.png" />    
   </div>
-  <div>
-    <p *ngIf="authService.user | async" class="mt-3" style="font-size: 10px;">Olá! {{(authService.user| async)?.displayName}}</p>
-  <a (click)="signup()" *ngIf="authService.user | async" style="font-size: 10px;">Logout</a>
-  </div>
-  
+  <div class="pr-3 mt-2">
+    <div *ngIf="authService.user | async" class="">Olá {{(authService.user| async)?.displayName}}!</div>
+    <div *ngIf="authService.user | async" (click)="signup()" class="btn btn-danger btn-sm p-0" 
+    style="background:rgb(180, 69, 152); height: 25px;width: 55px;">logout</div>
+</div>
 </div>
 
 <div>
@@ -21,13 +20,25 @@
 
 
 <!-- Footer -->
-<footer class=" page-footer text-center text-light fixed-bottom">
-  <a href="" routerLink="home">
-    <div class="ml-2">
-      <img src="assets/img/home-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
-      <p>Home</p>
+<footer class="page-footer fixed-bottom">
+  <div class="mx-auto p-2 text-center">
+      <a routerLink="home"><img src="assets/img/home-24px.svg" alt="Home" class="rounded-circle m-auto d-block" style="width: 35px; height: auto;"></a>
+      <a routerLink="home" class="text-light pb-2" style="font-size: 17px;">Home</a>
+  </div>
+  
+
+  <!-- <a href="/agendamento">
+    <div class="mr-4 p-3">
+      <img src="../assets/img/event_note-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
+      <p class="text-light">Agendar</p>
     </div>
   </a>
+  <a href="/login">
+    <div class="mr-8 p-3">
+      <img src="../assets/img/portrait-24px.svg" alt="Home" class="rounded-circle" style="width: 35px; height: auto;">
+      <p class="text-light">Perfil</p>
+    </div>
+  </a> -->
 
 </footer>
 <!-- Footer -->
