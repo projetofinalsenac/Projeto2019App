@@ -48,8 +48,7 @@ protected ag: any;
           this.profissional.dias = res.get('dias');
           this.agendamento.atividade = "Atividade";
           this.agendamento.dia = "Dia";
-          this.agendamento.horario = "Horario";
-          
+          this.agendamento.horario = "Horario";          
           console.log(res);
 
         }

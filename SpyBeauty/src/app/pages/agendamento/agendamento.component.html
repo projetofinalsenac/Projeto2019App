@@ -1,7 +1,8 @@
 <div class="container agendamento border mt-2 text-center p-0">
     <h4>Agendamento</h4>
-    <form action="" class="form-group form-agendamento form-ag p-0">
+    <form action="" class="form-group form-agendamento form-ag p-0" #fc=ngForm (ngSubmit)="submitAgendamento(fc)">
         <div class="mb-2">
+            
             <input type="text" class="form-control" name="nomeprofissional" placeholder="Nome profissional"
                 value="{{profissional.nome + ' ' + profissional.sobrenome}} " [ngModel]='agendamento.profissional'
                 name="nomeprofissional" required>
